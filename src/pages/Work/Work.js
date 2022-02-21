@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import { SectionTitle, Paragraph } from '../../styles';
+import { SectionTitle, Paragraph, StyledLink } from '../../styles';
 import { WorkItem, WorkTitle, JobTitle } from './styles';
 
 const Work = ({ user }) => {
@@ -21,6 +21,7 @@ const Work = ({ user }) => {
                 </span>
               </div>
               <Paragraph>{work.summary}</Paragraph>
+              <StyledLink href={work.url} target="_blank">{work.url}</StyledLink>
             </WorkItem>
           ))}
         </ul>
