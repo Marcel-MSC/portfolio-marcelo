@@ -1,19 +1,18 @@
 import styled from 'styled-components';
 import { blue } from '@carbon/colors';
-import { Link } from 'react-router-dom';
 
 export const SectionTitle = styled.h3`
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 `;
 
-export const Paragraph = styled.p`
-  white-space: pre-wrap;
+export const StyledLink = styled.a`
+  color: ${blue[20]};
+  font-weight: bold;
 `;
 
-export const StyledLink = styled.link`
-  color: ${blue[20]};;
-  font-weight: bold;
+export const Paragraph = styled.p`
+  white-space: pre-wrap;
 `;
 
 export const Pill = styled.span`
