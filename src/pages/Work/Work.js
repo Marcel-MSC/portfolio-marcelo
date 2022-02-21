@@ -9,6 +9,7 @@ const Work = ({ user }) => {
       <div>
         <SectionTitle>Work</SectionTitle>
         <ul>
+          {console.log(user.work)}
           {user.work.map((work, i) => (
             <WorkItem key={i}>
               <WorkTitle>{work.position}</WorkTitle>
