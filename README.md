@@ -1,5 +1,5 @@
 ### `Netlify`
-<a hrf="https://condescending-dubinsky-73aed0.netlify.app/">https://condescending-dubinsky-73aed0.netlify.app/<a>
+<a hrf="https://condescending-dubinsky-73aed0.netlify.app/" target="_blank" >https://condescending-dubinsky-73aed0.netlify.app/<a>
 
 In the project directory, you can run:
 
