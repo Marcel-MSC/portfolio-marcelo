@@ -26,12 +26,12 @@ const UserHeader = ({ user }) => {
           <p>Coding in {user.basics.region}</p>
           <p>{user.basics.yearsOfExperience} years of experience as a developer</p>
           <p>{user.basics.headline}</p>
-          <p>
-            Blog:{' '}
+          <p>Whatsapp/Telefone: {user.basics.phone}</p>
+          {/* <p>
             <a href={user.basics.blog} target="_blank" rel="noreferrer noopener">
               {user.basics.blog}
             </a>
-          </p>
+          </p> */}
         </div>
       </Header>
       <div>
@@ -40,7 +40,7 @@ const UserHeader = ({ user }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <span>View Résumé</span>
+          <span>Gitconnected Résumé</span>
           <ArrowRight16 />
         </ViewResumeLink>
       </div>
