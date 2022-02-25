@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { SideNavItems, SideNavLink } from 'carbon-components-react/lib/components/UIShell';
-
+import { User32, Code32, Portfolio32, Education32 } from '@carbon/icons-react'
 import { StyledSideNav } from './styles';
 
 const items = [
-  { name: 'Me', path: '/' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Work', path: '/work' },
-  { name: 'Education', path: '/education' },
+  { name: 'Me', path: '/', icon: User32},
+  { name: 'Projects', path: '/projects', icon: Code32},
+  { name: 'Work', path: '/work', icon: Portfolio32},
+  { name: 'Education', path: '/education', icon: Education32},
 ];
 
 const Sidebar = () => {
@@ -25,6 +25,7 @@ const Sidebar = () => {
             element={Link}
             to={i.path}
             key={i.name}
+            renderIcon={i.icon}
           >
             {i.name}
           </SideNavLink>
