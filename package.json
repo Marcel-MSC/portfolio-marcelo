@@ -7,11 +7,12 @@
     "@carbon/themes": "^10.50.0",
     "carbon-components": "^10.53.0",
     "carbon-components-react": "^7.53.0",
+    "minimist": "^1.2.6",
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^5.0.0",
+    "react-scripts": "^5.0.1",
     "sass": "^1.49.8",
     "styled-components": "^5.3.3",
     "web-vitals": "^2.1.4"
