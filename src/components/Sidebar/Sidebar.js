@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { SideNavItems, SideNavLink } from 'carbon-components-react/lib/components/UIShell';
+import { SideNavLink } from 'carbon-components-react/lib/components/UIShell';
 import { User32, Code32, Portfolio32, Education32 } from '@carbon/icons-react'
-import { StyledSideNav } from './styles';
+import { StyledSideNav, StyledSideNavItems } from './styles';
 
 const items = [
   { name: 'Me', path: '/', icon: User32},
@@ -16,7 +16,7 @@ const Sidebar = () => {
 
   return (
     <StyledSideNav isFixedNav expanded isChildOfHeader={false} aria-label="Side navigation">
-      <SideNavItems>
+      <StyledSideNavItems>
         {items.map(i => (
           <SideNavLink
             isActive={
@@ -30,7 +30,7 @@ const Sidebar = () => {
             {i.name}
           </SideNavLink>
         ))}
-      </SideNavItems>
+      </StyledSideNavItems>
     </StyledSideNav>
   );
 };
