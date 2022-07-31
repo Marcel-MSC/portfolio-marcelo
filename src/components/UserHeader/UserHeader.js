@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { ArrowRight16 } from '@carbon/icons-react';
 
-import { HeaderContainer, Header, Image, ViewResumeLink } from './styles';
+import DialogDownload from '../DialogDownload';
+
+import { HeaderContainer, Header, Image, ViewResumeLink, DownloadResumeBtn } from './styles';
+
 
 const UserHeader = ({ user }) => {
   const location = useLocation();
+  let [showDialog, setShowDialog] = useState(false)
+  
+  function dialogDownload () {
+    setShowDialog(true)
+  }
 
   return (
     <HeaderContainer isHome={location.pathname === '/'}>
@@ -43,6 +51,14 @@ const UserHeader = ({ user }) => {
           <span>Gitconnected Résumé</span>
           <ArrowRight16 />
         </ViewResumeLink>
+        <DownloadResumeBtn
+          onClick={dialogDownload}
+          rel="noopener noreferrer"
+        >
+          Download
+          <ArrowRight16 />
+        </DownloadResumeBtn>
+        {showDialog && <DialogDownload setShowDialog={setShowDialog}/>}
       </div>
     </HeaderContainer>
   );
