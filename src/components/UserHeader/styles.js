@@ -24,6 +24,7 @@ export const Image = styled.img`
 
 export const ViewResumeLink = styled.a`
   display: flex;
+  max-width: max-content;
   text-decoration: none;
   padding: 0.75rem 1.5rem;
   font-weight: bold;
