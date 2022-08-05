@@ -4,7 +4,7 @@ export const DivDownloadLanguage = styled.div`
     max-width: min-content;
 `;
 
-export const DownloadLanguage = styled.button`
+export const DownloadLanguage = styled.a`
   text-decoration: none;
   font-weight: bold;
   color: white;

@@ -15,9 +15,11 @@ const Projects = ({ user }) => {
               <ProjectTitle>{project.name}</ProjectTitle>
               <p>Summary: {project.summary}</p>
               <p>Description: {project.description}</p>
-              <StyledLink href={project.githubUrl} target="_blank">{project.githubUrl}</StyledLink>
+              <div>
+                <p>Github: </p><StyledLink href={project.githubUrl} target="_blank">{project.githubUrl}</StyledLink>
+              </div>
               <br></br>
-              {project.website ? <StyledLink href={project.website} target="_blank">{project.website}</StyledLink> : null}
+              {project.website ? <div><p>Website: </p><StyledLink href={project.website} target="_blank">{project.website}</StyledLink></div> : null}
               <SkillContainer>
                 {[...project.languages, ...project.libraries].map((item, j) => (
                   <Pill key={j}>{item}</Pill>
