@@ -8,13 +8,11 @@
     "@carbon/themes": "^10.50.0",
     "carbon-components": "^10.53.0",
     "carbon-components-react": "^7.53.0",
-    "eslint": "^8.15.0",
     "minimist": "^1.2.6",
-    "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "^5.0.0",
+    "react-scripts": "^5.0.1",
     "sass": "^1.49.8",
     "styled-components": "^5.3.3",
     "web-vitals": "^2.1.4"
@@ -23,7 +21,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build -p",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "rm -rf node_modules/ & rm -f package-lock.json"
   },
   "heroku-run-build-script": true,
   "eslintConfig": {
