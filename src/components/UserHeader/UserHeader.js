@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { ArrowRight16 } from '@carbon/icons-react';
 
-import DialogDownload from '../DialogDownload';
+// import DialogDownload from '../DialogDownload';
 
-import { HeaderContainer, Header, Image, ViewResumeLink, DownloadResumeBtn } from './styles';
+import { HeaderContainer, Header, Image, ViewResumeLink } from './styles';
 
 function secondsDiff(d1, d2) {
   let secDiff = Math.floor((d2 - d1) / 1000);
@@ -60,11 +60,12 @@ const UserHeader = ({ user }) => {
     // + seconds.toString() + ' Seconds';
 
   const location = useLocation();
-  let [showDialog, setShowDialog] = useState(false)
 
-  function dialogDownload() {
-    setShowDialog(true)
-  }
+  // let [showDialog, setShowDialog] = useState(false)
+
+  // function dialogDownload() {
+  //   setShowDialog(true)
+  // }
 
   return (
     <HeaderContainer isHome={location.pathname === '/'}>
