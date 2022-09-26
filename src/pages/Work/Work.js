@@ -9,15 +9,16 @@ const Work = ({ user }) => {
       <div>
         <SectionTitle>Work</SectionTitle>
         <ul>
-          {/* {console.log(user.work)} */}
           {user.work.map((work, i) => (
             <WorkItem key={i}>
               <WorkTitle>{work.position}</WorkTitle>
               <div>
-                <JobTitle>{work.company}</JobTitle> <span>{work.location}</span>
+                <JobTitle>{work.company}</JobTitle>
+                <br></br>
+                <span>Location: {work.location}</span>
                 <span> &sdot; </span>
                 <span>
-                  {work.start.year} to {work.isCurrentRole ? 'current' : work.end.year }
+                  From {work.startDate} to {work.isCurrentRole ? 'current' : work.endDate }
                 </span>
               </div>
               <Paragraph>{work.summary}</Paragraph>

@@ -9,6 +9,6 @@ export const StyledSideNav = styled(SideNav)`
 `
 export const StyledSideNavItems = styled(SideNavItems)`
   border-style: inset;
-    border-width: 0.5vh;
-    border-color: white;
+  border-width: 0.5vh;
+  border-color: #2ecc40;
 `

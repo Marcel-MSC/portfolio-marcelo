@@ -83,8 +83,8 @@ const UserHeader = ({ user }) => {
           </h4>
           <p>{user.basics.label}</p>
           <p>Coding in {user.basics.region}</p>
-          <p>{stringExp} of experience as a developer</p>
-          {/* <p>{user.basics.headline}</p> */}
+          <p>{stringExp} - of experience as a developer</p>
+          <p>{user.basics.headline}</p>
           <p>Whatsapp/Telefone: {user.basics.phone}</p>
           <p>E-mail: {user.basics.email}</p>
           {/* <p>
@@ -103,14 +103,11 @@ const UserHeader = ({ user }) => {
           <span>Gitconnected Résumé</span>
           <ArrowRight16 />
         </ViewResumeLink>
-        <DownloadResumeBtn
-          onClick={dialogDownload}
-          rel="noopener noreferrer"
-        >
-          Download
+        {/* <DownloadResumeBtn onClick={dialogDownload} rel="noopener noreferrer">
+            Download Resume
           <ArrowRight16 />
         </DownloadResumeBtn>
-        {showDialog && <DialogDownload setShowDialog={setShowDialog} />}
+        {showDialog && <DialogDownload setShowDialog={setShowDialog} />} */}
       </div>
     </HeaderContainer>
   );

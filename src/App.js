@@ -8,7 +8,6 @@ function App() {
     fetch('https://gitconnected.com/v1/portfolio/marcel-msc')
       .then(res => res.json())
       .then(user => {
-        console.log('user', user)
         setUser(user);
       });
   }, []);
