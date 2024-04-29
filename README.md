@@ -15,7 +15,7 @@
 ---
 
 <p align="center"> Portfolio created using ReactJS and Gitconnected API.
-    <br> 
+    <br>   
 </p>
 
 ## 📝 Table of Contents
@@ -27,6 +27,8 @@
 ## 🧐 About <a name = "about"></a>
 
 Its a portfolio to show some project, information and contact.
+Live on:
+- [Netlify](https://marcelomsc-cv.netlify.app/)
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
