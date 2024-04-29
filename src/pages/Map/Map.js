@@ -7,8 +7,6 @@ import env from "react-dotenv";
 
 const Map = ({ user }) => {
   let googleMapsApi = '';
-  console.log(`teste 1`, env.ENV_GOOGLE_MAPS_API_KEY)
-  console.log(`teste 2`, window.env.GOOGLE_MAPS_API_KEY)
   if (env.ENV_GOOGLE_MAPS_API_KEY !== undefined) {
     googleMapsApi = env.ENV_GOOGLE_MAPS_API_KEY;
   }
