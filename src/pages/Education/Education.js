@@ -18,7 +18,7 @@ const Education = ({ user }) => {
                 </Degree>{' '}
                 <span> &sdot; </span>
                 <span>
-                  {education.start.year} to {education.end.year}
+                  {education.start.month}/{education.start.year} to {education.end.moth}/{education.end.year}
                 </span>
               </div>
               <Paragraph>{education.description.replace('\n\n', '\n')}</Paragraph>
