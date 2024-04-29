@@ -8,12 +8,12 @@ import env from "react-dotenv";
 const Map = ({ user }) => {
   let googleMapsApi = '';
   console.log(`teste 1`, env.ENV_GOOGLE_MAPS_API_KEY)
-  console.log(`teste 2`, process.env.GOOGLE_MAPS_API_KEY)
+  console.log(`teste 2`, window.env.GOOGLE_MAPS_API_KEY)
   if (env.ENV_GOOGLE_MAPS_API_KEY !== undefined) {
     googleMapsApi = env.ENV_GOOGLE_MAPS_API_KEY;
   }
-  if (process.env.GOOGLE_MAPS_API_KEY !== undefined) {
-    googleMapsApi = process.env.GOOGLE_MAPS_API_KEY;
+  if (window.env.GOOGLE_MAPS_API_KEY !== undefined) {
+    googleMapsApi = window.env.GOOGLE_MAPS_API_KEY;
   }
   const defaultProps = {
     center: {
