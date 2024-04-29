@@ -2,6 +2,7 @@
   "name": "portfolio-marcelo",
   "version": "1.2.0",
   "author": "Marcelo Marcos Siqueira Carramanos",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@carbon/icons-react": "^10.46.0",
