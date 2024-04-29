@@ -6,18 +6,6 @@ import GoogleMapReact from 'google-map-react';
 import env from "react-dotenv";
 
 const Map = ({ user }) => {
-  let devApiGoogle = '';
-  console.log('typeof - ', typeof process.env.GOOGLE_MAPS_API_KEY, ' googleapi - ', process.env.GOOGLE_MAPS_API_KEY);
-  if (process.env.GOOGLE_MAPS_API_KEY !== undefined) {
-    // production
-    devApiGoogle = process.env.GOOGLE_MAPS_API_KEY
-    console.log(`if`, devApiGoogle)
-  }
-  else {
-    // dev
-    devApiGoogle = env.GOOGLE_MAPS_API_KEY
-    console.log(`else`, devApiGoogle)
-  }
   const defaultProps = {
     center: {
       lat: -23.553646087646484,
@@ -35,7 +23,7 @@ const Map = ({ user }) => {
         <SectionTitle>My approximate location</SectionTitle>
         <div style={{ height: '100vh', width: '100%' }}>
           <GoogleMapReact
-            bootstrapURLKeys={{ key: devApiGoogle }}
+            bootstrapURLKeys={{ key: env.GOOGLE_MAPS_API_KEY }}
             defaultCenter={defaultProps.center}
             defaultZoom={defaultProps.zoom}
             yesIWantToUseGoogleMapApiInternals={true}
