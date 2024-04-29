@@ -7,13 +7,16 @@ import env from "react-dotenv";
 
 const Map = ({ user }) => {
   let devApiGoogle = '';
-  console.log('typeof - ', typeof env.GOOGLE_MAPS_API_KEY, ' googleapi - ', env.GOOGLE_MAPS_API_KEY)
-  if(env.GOOGLE_MAPS_API_KEY != undefined && env.GOOGLE_MAPS_API_KEY) {
-    // dev
-    devApiGoogle = env.GOOGLE_MAPS_API_KEY
-  } else {
+  console.log('typeof - ', typeof process.env.GOOGLE_MAPS_API_KEY, ' googleapi - ', process.env.GOOGLE_MAPS_API_KEY);
+  if (process.env.GOOGLE_MAPS_API_KEY !== undefined) {
     // production
     devApiGoogle = process.env.GOOGLE_MAPS_API_KEY
+    console.log(`if`, devApiGoogle)
+  }
+  else {
+    // dev
+    devApiGoogle = env.GOOGLE_MAPS_API_KEY
+    console.log(`else`, devApiGoogle)
   }
   const defaultProps = {
     center: {
