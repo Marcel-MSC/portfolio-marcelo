@@ -2,8 +2,6 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { ArrowRight16 } from '@carbon/icons-react';
 
-// import DialogDownload from '../DialogDownload';
-
 import { HeaderContainer, Header, Image, ViewResumeLink } from './styles';
 
 function secondsDiff(d1, d2) {
@@ -61,12 +59,6 @@ const UserHeader = ({ user }) => {
 
   const location = useLocation();
 
-  // let [showDialog, setShowDialog] = useState(false)
-
-  // function dialogDownload() {
-  //   setShowDialog(true)
-  // }
-
   return (
     <HeaderContainer isHome={location.pathname === '/'}>
       <Header>
@@ -88,11 +80,6 @@ const UserHeader = ({ user }) => {
           <p>{user.basics.headline}</p>
           <p>Whatsapp/Telefone: {user.basics.phone}</p>
           <p>E-mail: {user.basics.email}</p>
-          {/* <p>
-            <a href={user.basics.blog} target="_blank" rel="noreferrer noopener">
-              {user.basics.blog}
-            </a>
-          </p> */}
         </div>
       </Header>
       <div>
@@ -104,11 +91,6 @@ const UserHeader = ({ user }) => {
           <span>Gitconnected Résumé</span>
           <ArrowRight16 />
         </ViewResumeLink>
-        {/* <DownloadResumeBtn onClick={dialogDownload} rel="noopener noreferrer">
-            Download Resume
-          <ArrowRight16 />
-        </DownloadResumeBtn>
-        {showDialog && <DialogDownload setShowDialog={setShowDialog} />} */}
       </div>
     </HeaderContainer>
   );

@@ -4,6 +4,7 @@ import Me from './Me';
 import Projects from './Projects';
 import Work from './Work';
 import Education from './Education';
+import Map from './Map';
 
 const Pages = ({ user }) => {
   return (
@@ -13,6 +14,7 @@ const Pages = ({ user }) => {
         <Route path="/projects" element={<Projects user={user} />} />
         <Route path="/work" element={<Work user={user} />} />
         <Route path="/education" element={<Education user={user} />} />
+        <Route path="/map" element={<Map user={user}/>} />
       </Routes>
     </Router>
   );
