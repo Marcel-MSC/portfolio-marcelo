@@ -7,12 +7,12 @@ import env from "react-dotenv";
 
 const Map = ({ user }) => {
   let googleMapsApi = '';
-  if (env.ENV_GOOGLE_MAPS_API_KEY !== undefined) {
-    googleMapsApi = env.ENV_GOOGLE_MAPS_API_KEY;
-  }
-  if (window.env.GOOGLE_MAPS_API_KEY !== undefined) {
-    googleMapsApi = window.env.GOOGLE_MAPS_API_KEY;
-  }
+  // if (env.ENV_GOOGLE_MAPS_API_KEY !== undefined) {
+  //   googleMapsApi = env.ENV_GOOGLE_MAPS_API_KEY;
+  // }
+  // if (window.env.GOOGLE_MAPS_API_KEY !== undefined) {
+  //   googleMapsApi = window.env.GOOGLE_MAPS_API_KEY;
+  // }
   const defaultProps = {
     center: {
       lat: -23.553646087646484,
