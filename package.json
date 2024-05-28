@@ -25,7 +25,7 @@
   },
   "scripts": {
     "start": "react-dotenv && react-scripts start",
-    "build": "npm i --force && react-dotenv && react-scripts build -p",
+    "build": "npm i --legacy-peer-deps && npm audit fix --force && react-dotenv && react-scripts build -p",
     "test": "react-dotenv && react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rm -rf node_modules/ & rm -f package-lock.json"
