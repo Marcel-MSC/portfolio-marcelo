@@ -6,7 +6,7 @@ export default function OpenStreetMapComp() {
     <div style={{ height: 'auto', width: 'auto' }}>
         <MapContainer
           center={[-23.55388, -46.56040]}
-          zoom={11}
+          zoom={16}
           scrollWheelZoom={false}
           style={{ height: '44vh', width: 'auto' }}
         >
