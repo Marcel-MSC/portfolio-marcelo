@@ -19,7 +19,7 @@
 
 [[plugins]]
   # Installs the Lighthouse Build Plugin for all deploy contexts
-  #package = "@netlify/plugin-lighthouse"
+  package = "@netlify/plugin-lighthouse"
 
 # Deploy Preview context: all deploys generated from
 # a pull/merge request will inherit these settings.
