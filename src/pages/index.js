@@ -14,7 +14,7 @@ const Pages = ({ user }) => {
         <Route path="/projects" element={<Projects user={user} />} />
         <Route path="/work" element={<Work user={user} />} />
         <Route path="/education" element={<Education user={user} />} />
-        <Route path="/map" element={<OpenStreetMap user={user}/>} />
+        {/* <Route path="/map" element={<OpenStreetMap user={user}/>} /> */}
       </Routes>
     </Router>
   );

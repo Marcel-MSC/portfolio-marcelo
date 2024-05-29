@@ -1,2 +1,2 @@
-import OpenStrettMap from './OpenStreetMap'
-export default OpenStrettMap
+// import OpenStrettMap from './OpenStreetMap'
+// export default OpenStrettMap
