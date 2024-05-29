@@ -4,7 +4,7 @@ import Me from './Me';
 import Projects from './Projects';
 import Work from './Work';
 import Education from './Education';
-import OpenStreetMap from './OpenStreetMap';
+// import OpenStreetMap from './OpenStreetMap';
 
 const Pages = ({ user }) => {
   return (
