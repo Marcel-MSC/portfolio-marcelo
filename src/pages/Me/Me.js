@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph, Pill } from '../../styles';
-import { ProfileLink } from './styles';
+import { ProfileLink, StyledLinka } from './styles';
 
 const Me = ({ user }) => {
   return (
@@ -24,9 +24,12 @@ const Me = ({ user }) => {
           {user.basics.profiles.map((profile, i) => (
             <ProfileLink key={profile.network}>
               {i !== 0 && ' | '}
-              <a href={profile.url} target="_blank" rel="noreferrer noopener">
+              <StyledLinka
+                href={profile.url} 
+                target="_blank" rel="noreferrer noopener"
+              >
                 {profile.network}
-              </a>
+              </StyledLinka>
             </ProfileLink>
           ))}
         </ul>

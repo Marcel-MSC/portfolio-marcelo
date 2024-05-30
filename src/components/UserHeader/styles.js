@@ -17,9 +17,12 @@ export const Header = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 200px;
+  width: 14vw;
   margin-right: 1rem;
-  border-radius: 2px;
+  border: 2px solid rgb(46, 204, 64);
+  border-radius: 10px;
+  border: 1px solid green;
+  height: 35vh;
 `;
 
 export const ViewResumeLink = styled.a`
@@ -30,11 +33,12 @@ export const ViewResumeLink = styled.a`
   font-weight: bold;
   align-items: center;
   margin-top: 1rem;
-  border: 2px solid #2ecc40;
-  background-color: rgba(46, 204, 64, 0.3);
+  border: 2px solid rgba(46, 204, 64, 0.3);
+  border-radius: 10px;
+  background-color: black;
   transition: background-color 250ms ease;
   &:hover {
-    background-color: #2ecc40;
+    background-color: rgba(46, 204, 64, 0.3);
   }
   svg {
     fill: white;

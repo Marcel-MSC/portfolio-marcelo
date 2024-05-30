@@ -50,12 +50,12 @@ const UserHeader = ({ user }) => {
   let weeks = weeksDiff(start, current);
   let years = yearsDiff(start, current);
 
-  let stringExp = years.toString() + ' Years or ' 
+  let stringExp = years.toString() + ' Years or '
     + weeks.toString() + ' Weeks or '
     + days.toString() + ' Days or '
     + hours.toString() + ' Hours';
-    // + minutes.toString() + ' Miutes or '
-    // + seconds.toString() + ' Seconds';
+  // + minutes.toString() + ' Miutes or '
+  // + seconds.toString() + ' Seconds';
 
   const location = useLocation();
 
@@ -67,6 +67,7 @@ const UserHeader = ({ user }) => {
           <h2>{user.basics.name}</h2>
           <h4>
             <a
+              style={{ color: 'rgb(46, 204, 64)' }}
               href={`https://gitconnected.com/${user.basics.username}`}
               target="_blank"
               rel="noreferrer noopener"

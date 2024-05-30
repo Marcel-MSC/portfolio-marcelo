@@ -7,7 +7,7 @@ export const SectionTitle = styled.h3`
 `;
 
 export const StyledLink = styled.a`
-  color: ${blue[50]};
+  color: rgb(46, 204, 64);
   font-weight: bold;
 `;
 
