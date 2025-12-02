@@ -1,4 +1,3 @@
-import React from 'react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph, Pill } from '../../styles';
 import { ProfileLink, StyledLinka } from './styles';

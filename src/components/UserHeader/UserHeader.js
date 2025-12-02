@@ -1,37 +1,7 @@
-import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { ArrowRight16 } from '@carbon/icons-react';
 
 import { HeaderContainer, Header, Image, ViewResumeLink } from './styles';
-
-function secondsDiff(d1, d2) {
-  let secDiff = Math.floor((d2 - d1) / 1000);
-  return secDiff;
-}
-
-function minutesDiff(d1, d2) {
-  let seconds = secondsDiff(d1, d2);
-  let minutesDiff = Math.floor(seconds / 60);
-  return minutesDiff;
-}
-
-function hoursDiff(d1, d2) {
-  let minutes = minutesDiff(d1, d2);
-  let hoursDiff = Math.floor(minutes / 60);
-  return hoursDiff;
-}
-
-function daysDiff(d1, d2) {
-  let hours = hoursDiff(d1, d2);
-  let daysDiff = Math.floor(hours / 24);
-  return daysDiff;
-}
-
-function weeksDiff(d1, d2) {
-  let days = daysDiff(d1, d2);
-  let weeksDiff = Math.floor(days / 7);
-  return weeksDiff;
-}
 
 function yearsDiff(d1, d2) {
   let date1 = new Date(d1);
@@ -41,46 +11,36 @@ function yearsDiff(d1, d2) {
 }
 
 const UserHeader = ({ user }) => {
-  let start = new Date(2019, 5, 1).getTime();
+  let start = new Date(2020, 1, 1).getTime();
   let current = Date.now();
-  // let seconds = secondsDiff(start, current);
-  // let minutes = minutesDiff(start, current);
-  let hours = hoursDiff(start, current)
-  let days = daysDiff(start, current);
-  let weeks = weeksDiff(start, current);
   let years = yearsDiff(start, current);
-
-  let stringExp = years.toString() + ' Years or '
-    + weeks.toString() + ' Weeks or '
-    + days.toString() + ' Days or '
-    + hours.toString() + ' Hours';
-  // + minutes.toString() + ' Miutes or '
-  // + seconds.toString() + ' Seconds';
+  let stringExp = years.toString() + ' Years'
 
   const location = useLocation();
+
+  let profileGitConnected = user.basics.profiles.find(profile => profile.network.toLowerCase() === 'gitconnected');
 
   return (
     <HeaderContainer isHome={location.pathname === '/'}>
       <Header>
-        <Image src={user.basics.picture} />
+        <Image src={user.basics.image} />
         <div>
           <h2>{user.basics.name}</h2>
           <h4>
             <a
               style={{ color: 'rgb(46, 204, 64)' }}
-              href={`https://gitconnected.com/${user.basics.username}`}
+              href={profileGitConnected.url}
               target="_blank"
               rel="noreferrer noopener"
             >
-              @{user.basics.username}
+              Gitconnected Profile
             </a>
           </h4>
           <p>{user.basics.label}</p>
-          <p>Coding in {user.basics.region}</p>
-          <p>{stringExp} - of experience as a developer</p>
-          <p>{user.basics.headline}</p>
-          <p>Whatsapp/Telefone: {user.basics.phone}</p>
-          <p>E-mail: {user.basics.email}</p>
+          <p>Coding in {user.basics.location.city}</p>
+          <p>{stringExp} of experience as a Full Stack Developer</p>
+          <p>Whatsapp/Telefone: 11 96941-1127</p>
+          <p>E-mail: marcelomarcos.s.c@gmail.com</p>
         </div>
       </Header>
       <div>
