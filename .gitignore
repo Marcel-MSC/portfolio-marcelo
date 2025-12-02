@@ -11,6 +11,8 @@ package-lock.json
 
 # production
 /build
+env.js
+**/env.js
 
 # misc
 .DS_Store
@@ -19,6 +21,7 @@ package-lock.json
 .env.development.local
 .env.test.local
 .env.production.local
+env.js
 
 npm-debug.log*
 yarn-debug.log*
