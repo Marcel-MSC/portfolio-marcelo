@@ -5,27 +5,24 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@carbon/icons-react": "^10.46.0",
-    "@carbon/themes": "^10.50.0",
-    "carbon-components": "^10.53.0",
-    "carbon-components-react": "^7.53.0",
-    "minimist": "^1.2.6",
+    "@carbon/icons-react": "^10.49.2",
+    "@carbon/themes": "^10.55.1",
+    "carbon-components": "^10.58.8",
+    "carbon-components-react": "^7.59.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-dotenv": "^0.1.3",
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.1",
     "sass": "^1.49.8",
-    "save": "^2.9.0",
-    "styled-components": "^5.3.3",
-    "web-vitals": "^2.1.4"
+    "styled-components": "^5.3.3"
   },
   "scripts": {
     "start": "react-dotenv && react-scripts start",
     "build": "react-dotenv && react-scripts build -p",
     "test": "react-dotenv && react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "rm -rf node_modules/ & rm -f package-lock.json"
+    "clean": "rd /s /q node_modules 2>nul || del /f package-lock.json"
   },
   "heroku-run-build-script": true,
   "eslintConfig": {
@@ -43,7 +40,12 @@
     ]
   },
   "devDependencies": {
-    "nodemon": "^2.0.19",
+    "nodemon": "^3.1.11",
     "terser-brunch": "^4.1.0"
+  },
+  "overrides": {
+    "nth-check": "^2.1.1",
+    "postcss": "^8.4.31",
+    "webpack-dev-server": "^4.15.1"
   }
 }
