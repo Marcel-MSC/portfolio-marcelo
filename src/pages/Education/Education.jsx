@@ -1,9 +1,10 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import { SectionTitle, Paragraph } from '../../styles';
-import { EducationItem, Institution, Degree } from './styles';
+import React from "react";
+import Layout from "../../components/Layout";
+import { SectionTitle, Paragraph } from "../../styles";
+import { EducationItem, Institution, Degree } from "./styles";
 
 const Education = ({ user }) => {
+  console.log("user education", user.education);
   return (
     <Layout user={user}>
       <div>
@@ -11,17 +12,22 @@ const Education = ({ user }) => {
         <ul>
           {user.education.map((education, i) => (
             <EducationItem key={i}>
-              <Institution>{education.position}</Institution>
+              <Institution>{education.institution}</Institution>
               <div>
                 <Degree>
                   {education.studyType}, {education.area}
-                </Degree>{' '}
+                </Degree>{" "}
                 <span> &sdot; </span>
                 <span>
-                  {education.start.month}/{education.start.year} to {education.end.moth}/{education.end.year}
+                  {education.start?.month}/{education.start?.year} to{" "}
+                  {education.end?.month}/{education.end?.year}
                 </span>
               </div>
-              <Paragraph>{education.description.replace('\n\n', '\n')}</Paragraph>
+              {education.description && (
+                <Paragraph>
+                  {education.description.replace(/\n\n/g, "\n")}
+                </Paragraph>
+              )}
             </EducationItem>
           ))}
         </ul>

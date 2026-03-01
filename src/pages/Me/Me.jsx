@@ -1,5 +1,5 @@
 import Layout from '../../components/Layout';
-import { SectionTitle, Paragraph, Pill } from '../../styles';
+import { SectionTitle, Paragraph, Pill, StyledLink } from '../../styles';
 import { ProfileLink, StyledLinka } from './styles';
 
 const Me = ({ user }) => {
@@ -17,6 +17,46 @@ const Me = ({ user }) => {
           ))}
         </div>
       </div>
+      {Array.isArray(user.certificates) && user.certificates.length > 0 && (
+        <div>
+          <SectionTitle>Certificates</SectionTitle>
+          <ul>
+            {user.certificates.map((cert, i) => (
+              <li key={i}>
+                {cert.url ? (
+                  <StyledLink href={cert.url} target="_blank" rel="noopener noreferrer">{cert.name}</StyledLink>
+                ) : (
+                  cert.name
+                )}
+                {cert.issuer && ` — ${cert.issuer}`}
+                {(cert.date || cert.fullDate) && ` (${cert.date || cert.fullDate})`}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {Array.isArray(user.languages) && user.languages.length > 0 && (
+        <div>
+          <SectionTitle>Languages</SectionTitle>
+          <ul>
+            {user.languages.map((lang, i) => (
+              <li key={i}>
+                {lang.language}{lang.fluency ? ` — ${lang.fluency}` : ''}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {Array.isArray(user.interests) && user.interests.length > 0 && (
+        <div>
+          <SectionTitle>Interests</SectionTitle>
+          <div>
+            {user.interests.map((interest, i) => (
+              <Pill key={i}>{interest.name}</Pill>
+            ))}
+          </div>
+        </div>
+      )}
       <div>
         <SectionTitle>Profiles</SectionTitle>
         <ul>
@@ -24,7 +64,7 @@ const Me = ({ user }) => {
             <ProfileLink key={profile.network}>
               {i !== 0 && ' | '}
               <StyledLinka
-                href={profile.url} 
+                href={profile.url}
                 target="_blank" rel="noreferrer noopener"
               >
                 {profile.network}

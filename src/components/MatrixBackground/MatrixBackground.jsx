@@ -4,24 +4,32 @@ const MATRIX_CHARS =
   "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモ01";
 const FONT_SIZE = 16;
 const MAX_COLUMNS = 50;
-const OPACITY = 0.09;
+const OPACITY = 0.9;
 
 const MatrixBackground = () => {
   const canvasRef = useRef(null);
+  const wrapperRef = useRef(null);
   const dropsRef = useRef([]);
   const frameRef = useRef(null);
+  const sizeRef = useRef({ w: 0, h: 0 });
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+    const wrapper = wrapperRef.current;
+    if (!canvas || !wrapper) return;
 
     const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
     const setCanvasSize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      const cols = Math.min(Math.floor(canvas.width / FONT_SIZE), MAX_COLUMNS);
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      if (sizeRef.current.w === w && sizeRef.current.h === h) return;
+      sizeRef.current = { w, h };
+
+      canvas.width = w;
+      canvas.height = h;
+      const cols = Math.min(Math.floor(w / FONT_SIZE), MAX_COLUMNS);
       dropsRef.current = Array(cols).fill(1);
     };
 
@@ -63,12 +71,25 @@ const MatrixBackground = () => {
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="pointer-events-none fixed inset-0 z-0"
-      style={{ width: "100%", height: "100%" }}
+    <div
+      ref={wrapperRef}
+      className="pointer-events-none fixed inset-0 z-0 h-screen w-screen"
+      style={{
+        left: 0,
+        top: 0,
+        width: "100vw",
+        height: "100vh",
+        minWidth: "100vw",
+        minHeight: "100vh",
+      }}
       aria-hidden
-    />
+    >
+      <canvas
+        ref={canvasRef}
+        className="block h-full w-full"
+        style={{ display: "block", width: "100%", height: "100%" }}
+      />
+    </div>
   );
 };
 

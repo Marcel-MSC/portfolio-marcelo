@@ -12,8 +12,9 @@ const Projects = ({ user }) => {
           {user.projects.map((project, i) => (
             <ProjectItem key={i}>
               <ProjectTitle>{project.name}</ProjectTitle>
-              <p>Summary: {project.summary}</p>
-              <p>Description: {project.description}</p>
+              {(project.description || project.summary) && (
+                <p>Description: {project.description || project.summary}</p>
+              )}
               <div>
                 <p>Github: </p><StyledLink href={project.githubUrl} target="_blank">{project.githubUrl}</StyledLink>
               </div>
