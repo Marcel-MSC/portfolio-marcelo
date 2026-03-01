@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Pages from './pages';
+import MatrixBackground from './components/MatrixBackground';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -16,7 +17,14 @@ function App() {
     return <div />;
   }
 
-  return <Pages user={user} />;
+  return (
+    <>
+      <MatrixBackground />
+      <div className="relative z-10">
+        <Pages user={user} />
+      </div>
+    </>
+  );
 }
 
 export default App;
