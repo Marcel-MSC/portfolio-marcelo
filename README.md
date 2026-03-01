@@ -14,7 +14,7 @@
 
 ---
 
-<p align="center"> Portfolio created using ReactJS and Gitconnected API.
+<p align="center"> Portfolio created using React and the Gitconnected API.
     <br>   
 </p>
 
@@ -22,20 +22,33 @@
 
 - [About](#about)
 - [Built Using](#built_using)
+- [Getting Started](#getting_started)
 - [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
 
-Its a portfolio to show some project, information and contact.
-Live on:
-- [Netlify](https://marcelomsc-cv.netlify.app/)
+A portfolio to showcase projects, experience and contact info. Data is loaded from the [Gitconnected](https://gitconnected.com) API.
+
+**Live:** [Netlify](https://marcelomsc-cv.netlify.app/)
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [React](https://react.dev//) - React
-- [Styled Components](https://styled-components.com//) - Style Components
-- [React Router](https://reactrouter.com/en/main) - React Router
-- [React Carbon](https://react.carbondesignsystem.com/) - Icons, Themes and Components
+- [React](https://react.dev/) – UI library
+- [Vite](https://vitejs.dev/) – Build tool and dev server
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS
+- [React Router](https://reactrouter.com/) – Client-side routing
+- [Styled Components](https://styled-components.com/) – Component styling
+- [Lucide React](https://lucide.dev/) – Icons
+- [Gitconnected API](https://gitconnected.com/) – Portfolio data
+
+## 🚀 Getting Started <a name = "getting_started"></a>
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173). Build for production: `npm run build`.
 
 ## ✍️ Authors <a name = "authors"></a>
 
