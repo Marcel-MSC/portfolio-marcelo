@@ -49,7 +49,7 @@ const UserHeader = ({ user }) => {
       </div>
       <div className="mt-4 md:mt-0">
         <a
-          href={`https://gitconnected.com/${user.basics.username}/resume`}
+          href="https://gitconnected.com/marcel-msc/resume"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex max-w-max items-center rounded-lg border-2 border-accent/30 bg-gray-900 px-6 py-3 font-bold text-gray-100 transition-colors hover:bg-accent/30"
