@@ -1,7 +1,7 @@
-import React from 'react';
-import Layout from '../../components/Layout';
-import { SectionTitle, Pill, StyledLink } from '../../styles';
-import { ProjectItem, ProjectTitle, SkillContainer } from './styles';
+import React from "react";
+import Layout from "../../components/Layout";
+import { SectionTitle, Pill, StyledLink } from "../../styles";
+import { ProjectItem, ProjectTitle, SkillContainer } from "./styles";
 
 const Projects = ({ user }) => {
   return (
@@ -12,14 +12,23 @@ const Projects = ({ user }) => {
           {user.projects.map((project, i) => (
             <ProjectItem key={i}>
               <ProjectTitle>{project.name}</ProjectTitle>
-              {(project.description || project.summary) && (
-                <p>Description: {project.description || project.summary}</p>
-              )}
-              <div>
-                <p>Github: </p><StyledLink href={project.githubUrl} target="_blank">{project.githubUrl}</StyledLink>
-              </div>
-              <br></br>
-              {project.website ? <div><p>Website: </p><StyledLink href={project.website} target="_blank">{project.website}</StyledLink></div> : null}
+              {project.description ? (
+                <p>Description: {project.description}</p>
+              ) : null}
+              <p>
+                Github:{" "}
+                <StyledLink href={project.githubUrl} target="_blank">
+                  {project.githubUrl}
+                </StyledLink>
+              </p>
+              {project.website ? (
+                <p>
+                  Website:{" "}
+                  <StyledLink href={project.website} target="_blank">
+                    {project.website}
+                  </StyledLink>
+                </p>
+              ) : null}
               <SkillContainer>
                 {[...project.languages, ...project.libraries].map((item, j) => (
                   <Pill key={j}>{item}</Pill>

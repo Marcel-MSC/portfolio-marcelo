@@ -4,7 +4,6 @@ import { SectionTitle, Paragraph } from "../../styles";
 import { EducationItem, Institution, Degree } from "./styles";
 
 const Education = ({ user }) => {
-  console.log("user education", user.education);
   return (
     <Layout user={user}>
       <div>
