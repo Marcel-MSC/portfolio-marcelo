@@ -4,7 +4,7 @@ const MATRIX_CHARS =
   "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモ01";
 const FONT_SIZE = 16;
 const MAX_COLUMNS = 50;
-const OPACITY = 0.9;
+const OPACITY = 0.5;
 
 const MatrixBackground = () => {
   const canvasRef = useRef(null);
