@@ -1,14 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
+/*
+  Tokens de cor — fonte única.
+  Accent: rgb(53, 211, 79)  |  Surface Graphite (paleta 4)
+*/
 @theme {
-  --color-accent: #2ecc40;
+  --color-accent: #ffffff;
+  --color-surface: #121212;
+  --color-surface-raised: #1e1e1e;
+  --color-muted: #a0a0a0;
+  --color-fg: #f5f5f5;
+  --color-social-link: #35d34f;
+  --font-sans: 'DM Sans', ui-sans-serif, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+:root {
+  /* Canais RGB do verde — fundo soft (pills, nav ativo, CTAs) */
+  --color-accent-rgb: 53, 211, 79;
+  --bg-accent-soft: rgba(var(--color-accent-rgb), 0.12);
+  --bg-accent-soft-hover: rgba(var(--color-accent-rgb), 0.2);
+  /* Borda das pills */
+  --color-pill-border: #979595;
 }
 
 @layer base {
   body {
-    @apply bg-gray-900 text-gray-100 antialiased;
+    @apply bg-surface font-sans text-fg antialiased;
   }
   a {
     @apply text-accent;
+  }
+}
+
+@layer utilities {
+  .bg-accent-soft {
+    background-color: var(--bg-accent-soft);
+  }
+  .bg-accent-soft-hover {
+    background-color: var(--bg-accent-soft-hover);
   }
 }

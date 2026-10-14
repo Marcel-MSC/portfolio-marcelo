@@ -1,14 +1,25 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Me from './Me';
 import Projects from './Projects';
 import Work from './Work';
 import Education from './Education';
 // import OpenStreetMap from './OpenStreetMap';
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const Pages = ({ user }) => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route exact path="/" element={<Me user={user} />} />
         <Route path="/projects" element={<Projects user={user} />} />
