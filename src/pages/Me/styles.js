@@ -8,6 +8,6 @@ export const ProfileLink = styled.li`
 `;
 
 export const StyledLinka = styled.a`
-  color: rgb(46, 204, 64);
+  color: var(--color-social-link);
   font-weight: bold;
 `;

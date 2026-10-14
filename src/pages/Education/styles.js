@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export const EducationItem = styled.li`
   margin-top: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid rgb(46, 204, 64);
+  border-bottom: 1px solid var(--color-accent);
 `
 
 export const Institution = styled.h4`

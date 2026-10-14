@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Pages from "./pages";
-import MatrixBackground from "./components/MatrixBackground";
 import { normalizeProfileUrls } from "./utils/portfolio";
 import fallbackPortfolio from "./data/portfolio.json";
 
@@ -26,14 +25,7 @@ function App() {
     return <div />;
   }
 
-  return (
-    <>
-      <MatrixBackground />
-      <div className="relative z-10">
-        <Pages user={user} />
-      </div>
-    </>
-  );
+  return <Pages user={user} />;
 }
 
 export default App;
